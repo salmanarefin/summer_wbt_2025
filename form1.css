@@ -1,0 +1,121 @@
+h2 {
+    color: red;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.form-group label {
+    flex-basis: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.state {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.state label {
+    flex-basis: 100px;
+    text-align: right;
+    margin-right: 10px;
+
+}
+
+.Country {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Country label {
+    flex-basis: 100px;
+    text-align: right;
+    margin-right: 10px;
+
+}
+
+
+.donation {
+    display: flex;
+    align-items: center;
+    width: 12cm;
+    margin-bottom: 10px;
+
+}
+
+.donation label {
+    flex-basis: 100px;
+    text-align: center;
+
+
+}
+
+.a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 10cm;
+}
+
+.b label {
+    flex-basis: 100px;
+    text-align: left;
+    margin-right: 10px;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 10cm;
+
+}
+
+#comments {
+    height: 50px;
+    width: 150px;
+
+}
+
+#Postmail {
+
+    margin-left: 187px;
+}
+
+#Telephone {
+    margin-left: 187px;
+}
+
+#Fax1 {
+    margin-left: 187px;
+
+}
+
+#E-mail1 {
+    margin-left: 187px;
+}
+
+#Postmail1 {
+    margin-left: 187px;
+}
+
+.required {
+    color: red;
+}
+
+#Inmemoryof {
+    margin-left: 246px;
+
+}
+
+body {
+    background-color: #D7D7D7;
+}
