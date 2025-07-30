@@ -1,0 +1,76 @@
+selector {
+    property: value;
+}
+
+
+
+
+.nav-box {
+    border: 3px solid rgb(1, 113, 113);
+    padding: 10px;
+    background-color: white;
+    width: fit-content;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-box a {
+    text-decoration: none;
+    color: rgb(1, 113, 113);
+    background-color: #e4ebf1;
+    border: 2px solid #050505;
+
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.nav-box a:hover {
+    background-color: #00b3a77e;
+    border-color: #00b3a77e;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(1, 113, 113);
+}
+
+.name {
+    text-align: center;
+    color: rgb(1, 113, 113);
+}
+
+.skill {
+    text-align: center;
+    color: rgb(1, 113, 113);
+}
+
+.job {
+    text-align: center;
+    color: rgb(1, 113, 113);
+
+}
+
+.apo {
+    text-align: center;
+    color: rgb(1, 113, 113);
+}
+
+.BATTON {
+    text-align: center;
+    color: rgb(195, 104, 59);
+}
+
+.APPOINTMENT TIME {
+    color: brown;
+
+}
+
+body {
+
+    background-image: url("../image/image1.jpg");
+}
