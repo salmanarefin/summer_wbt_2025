@@ -4,68 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" type="text/css" href="../css/contactme.css">
-    <div class="nav-box">
+</head>
 
+<body>
+
+    <div class="nav-box">
         <nav>
             <a href="../rtfolio.html">HOME</a>
             <a href="../html/EDUCATION.html">EDUCATION</a>
             <a href="../html/EXPERIENCE.html">EXPERIENCE</a>
             <a href="../html/PROJECT.html">PROJECT</a>
             <a href="../html/contactme.html">CONTACT ME</a>
-
+        </nav>
     </div>
-</head>
 
-<body>
     <hr>
-    <h1>
-        CONTACT ME:
-    </h1>
+    <h1>CONTACT ME:</h1>
     <hr>
-    <div class="name">
-        <form action="" method="GET">
-            Fisrt Name : <br><input type="text" required><br>
-            Last Name : <br><input type="text" required><br>
-            Email : <br><input type="email" required><br>
-            Phone : <br><input type="tel" required><br><br>
-    </div>
-    <div class="skill">
-        Skills you want to hire me for :
-        <br>
-        <input type="checkbox" id="html" name="html" value="HTML" required>
-        <label for="html">HTML</label><br>
-        <input type="checkbox" id="css" name="css" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="checkbox" id="javascript" name="javascript" value="JavaScript">
-        <label for="javascript">JavaScript</label><br><br>
-    </div>
-    <div class="job">
-        Job type :
-        <br>
-        <input type="radio" id="Internship" name="jobType" value="Intern" required>
-        <label for="Internship">Internship</label><br>
-        <input type="radio" id="Fulltime" name="jobType" value="Fulltime">
-        <label for="Fulltime">Fulltime</label><br>
-        <input type="radio" id="Contract" name="jobType" value="Contract">
-        <label for="Contract">Contract-based</label><br><br>
-    </div>
-    <div class="apo">
-        APPOINTMENT TIME :
-        <br>
 
-        <select name="APPOINTMENT TIME">
-            <option value="10.00 AM" required>10.00 AM</option>
-            <option value="11.00 AM">11.00 AM</option>
-            <option value="12.00 PM">12.00 PM</option>
-            <option value="01.00PM">01.00 PM</option>
-        </select><br><br>
-    </div>
-    <div class="BATTON">
-        <input type="submit" value="Contact Me">
-        <input type="reset" value="Reset">
-    </div>
+    <form id="myForm" method="GET" action="../html/idpass.html">
+        <div class="name">
+            First Name : <br><input type="text" name="firstname" required><br>
+            Last Name : <br><input type="text" name="lastname" required><br>
+            Email : <br><input type="email" name="email" required><br>
+            Phone : <br><input type="tel" name="phone" required><br><br>
+        </div>
+
+        <div class="skill">
+            Skills you want to hire me for :<br>
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+        </div>
+
+        <div class="job">
+            Job type :<br>
+            <input type="radio" id="Internship" name="jobType" value="Intern" required>
+            <label for="Internship">Internship</label><br>
+            <input type="radio" id="Fulltime" name="jobType" value="Fulltime">
+            <label for="Fulltime">Fulltime</label><br>
+            <input type="radio" id="Contract" name="jobType" value="Contract">
+            <label for="Contract">Contract-based</label><br><br>
+        </div>
+
+        <div class="apo">
+            APPOINTMENT TIME :<br>
+            <select name="appointment" required>
+                <option value="10.00 AM">10.00 AM</option>
+                <option value="11.00 AM">11.00 AM</option>
+                <option value="12.00 PM">12.00 PM</option>
+                <option value="01.00 PM">01.00 PM</option>
+            </select><br><br>
+        </div>
+
+        <div class="BATTON">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
     </form>
 
 </body>
