@@ -10,8 +10,96 @@
 </head>
 
 <body>
+    <?php
+
+    $nameErr = $companyErr = $AddressErr = $cityErr = $stateErr = $codeErr = $countryErr = $phoneErr = $faxError = $emailError=$DoonationAmountError=$redonationError=$zipError=$commentError=$checkboxError="";
+    $name= $company = $Address = $city = $state = $code = $country = $phone = $fax = $email=$DoonationAmount=$redonation=$zip=$comment=$checkbox="";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["code"])) {
+            $codeErr = "code is required";
+        } else {
+            $code = test_input($_POST["code"]);
+            if (!is_numeric($code)) {
+            $codeErr = "Only numeric values allowed for Roll";
+            }
+        }
 
 
+        if (empty($_POST["name"])) {
+            $nameErr = "Name is required";
+        } else {
+            $name = test_input($_POST["name"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+            $nameErr = "Only letters and white space allowed";
+            }
+        }
+
+
+        if (empty($_POST["company"])) {
+            $companyErr = "company Name is required";
+        } else {
+            $company = test_input($_POST["company"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$company)) {
+            $companyErr = "Only letters and white space allowed";
+            }
+        }
+
+        if (empty($_POST["Address"])) {
+            $AddressErr = "Address Name is required";
+        } else {
+            $Address = test_input($_POST["Address"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$Address)) {
+            $AddressErr = "Only letters and white space allowed";
+            }
+        }
+
+        if (empty($_POST["city"])) {
+            $cityErr = "city Name is required";
+        } else {
+            $city = test_input($_POST["city"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$city)) {
+            $cityErr = "Only letters and white space allowed";
+            }
+        }
+        
+        if (empty($_POST["country"])) {
+            $countryErr = "country Name is required";
+        } else {
+            $country = test_input($_POST["country"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$country)) {
+            $countryErr = "Only letters and white space allowed";
+            }
+        }
+
+        if (empty($_POST["comment"])) {
+            $commentErr = "comment Name is required";
+        } else {
+            $comment = test_input($_POST["comment"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$comment)) {
+            $commentErr = "Only letters and white space allowed";
+            }
+        }
+
+        if (empty($_POST["email"])) {
+            $emailErr = "Email is required";
+        } else {
+            $email = test_input($_POST["email"]);
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+            }
+        }
+
+
+
+        function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+            }
+    }
+    ?>
 
     <p><span class="required">*</span> - Denotes Required Information</p>
     <p><strong> > 1 Donation</strong> > 2 Confirmation >Thank You</p>
@@ -20,25 +108,25 @@
         <h2> DONOR Information </h2>
 
         <div class="form-group">
-            <label for="First Name"><strong> First Name</strong><span class="required">*</span></label>
-            <input type=" text" id="First Name" required>
+            <label for="First Name"><strong> First Name</strong><span class="required">*<?php echo $nameErr;?></span></label>
+            <input type=" text" id="First Name" value ="<?php echo $name;?>" >
 
         </div>
 
         <div class="form-group">
-            <label for="Last Name"> <strong>Last Name</strong><span class="required">*</span> </label>
-            <input type="text" id="Last Name" required>
+            <label for="Last Name"> <strong>Last Name</strong><span class="required">*<?php echo $nameErr;?></span> </label>
+            <input type="text" id="Last Name" value ="<?php echo $name;?>">
 
         </div>
 
         <div class="form-group">
-            <label for="Company"><strong>Company</strong> </label>
-            <input type="text" id="Company">
+            <label for="Company"><strong>Company</strong><?php echo $companyErr;?></label>
+            <input type="text" id="Company"value ="<?php echo $company;?>">
 
         </div>
         <div class="form-group">
             <label for="Address 1"><strong>Adress 1</strong><span class="required">*</span></label>
-            <input type="text" id="Address 1:" required>
+            <input type="text" id="Address 1:" >
 
         </div>
         <div class="form-group">
@@ -48,7 +136,7 @@
         </div>
         <div class="form-group">
             <label for="City"><strong>City</strong><span class="required">*</span></label>
-            <input type="text" id="City" required>
+            <input type="text" id="City">
 
         </div>
 
@@ -68,7 +156,7 @@
 
         <div class="form-group">
             <label for="Zip Code"><strong> Code</strong><span class="required">*</span></label>
-            <input type="number" id="Zip Code" required>
+            <input type="number" id="Zip Code" >
 
         </div>
 
@@ -90,21 +178,21 @@
 
         <div class="form-group">
             <label for="Phone"><strong>Phone</strong></label>
-            <input type="number" id="Phone" required>
+            <input type="number" id="Phone" >
 
         </div>
 
 
         <div class="form-group">
             <label for="Fax"><strong>Fax</strong></label>
-            <input type="text" id="Fax" required>
+            <input type="text" id="Fax">
 
         </div>
 
 
         <div class="form-group">
             <label for="Email"><strong>Email</strong><span class="required">*</span></label>
-            <input type="email" id="Email" required>
+            <input type="email" id="Email" >
 
         </div>
 
@@ -134,7 +222,7 @@
         <div class="a">
             <small> (check a button or type in your amount)</small>
             <label for="Other Amount $"><strong>Other Amount $:</strong></label>
-            <input type="number" id="Other Amount $" required>
+            <input type="number" id="Other Amount $" >
         </div>
 
         <div class="b">
