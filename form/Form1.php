@@ -104,7 +104,7 @@
     <p><span class="required">*</span> - Denotes Required Information</p>
     <p><strong> > 1 Donation</strong> > 2 Confirmation >Thank You</p>
 
-    <form method="Get">
+    <form method="POST">
         <h2> DONOR Information </h2>
 
         <div class="form-group">
