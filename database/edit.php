@@ -1,0 +1,84 @@
+
+<h2>DISPLAY</h2>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>NAME</th>
+    <th>PROFIT</th>
+    <th>Action</th>
+  </tr>
+  <?php if ($name && $bp!=="" && $sp!==""): ?>
+    <tr>
+      <td><?php echo htmlspecialchars($name); ?></td>
+      <td><?php echo (int)$sp - (int)$bp; ?></td>
+      <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+    </tr>
+  <?php else: ?>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+    </tr>
+  <?php endif; ?>
+</table>
+<p>*** Note: Only Products with Display = "Yes" should be printed</p>
+
+
+<h2 id="edit">EDIT PRODUCT</h2>
+<form>
+  Name: <input type="text" value="HTC"><br><br>
+  Buying Price: <input type="text" value="34000"><br><br>
+  Selling Price: <input type="text" value="37000"><br><br>
+  Display: <input type="checkbox" checked><br><br>
+  <input type="submit" value="SAVE">
+</form>
+
+<h2 id="delete">DELETE PRODUCT</h2>
+<p>Name: HTC</p>
+<p>Buying Price: 34000</p>
+<p>Selling Price: 37000</p>
+<p>Displayable: Yes</p>
+<form>
+  <input type="submit" value="Delete">
+</form>
+
+<h2>SEARCH</h2>
+<form>
+  <input type="text" placeholder="Search By Name">
+  <input type="submit" value="Search By Name">
+</form>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>NAME</th>
+    <th>PROFIT</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>Samsung</td>
+    <td>5000</td>
+    <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+  </tr>
+  <tr>
+    <td>Nokia</td>
+    <td>1500</td>
+    <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+  </tr>
+  <tr>
+    <td>Xiaomi</td>
+    <td>3300</td>
+    <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+  </tr>
+</table>
+
+</body>
+</html>
